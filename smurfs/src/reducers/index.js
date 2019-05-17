@@ -39,7 +39,7 @@ const initialState = {
 
 const smurfReducer = (state = initialState, action) => {
   console.log("smurfReducer", action);
-  switch ((action, type)) {
+  switch ((action.type)) {
     case FETCH_SMURFS_START:
       return {
         ...state,
