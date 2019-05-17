@@ -5,8 +5,8 @@ import './App.css';
 
 
 class AddSmurfForm extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             name: '',
             age: '',

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, NavLink, withRouter } from 'react-router-dom';
 
 import SmurfList from './SmurfList';
 import AddSmurfForm from './AddSmurfForm'
@@ -25,11 +26,29 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Smurf Village with Redux and all that jazz!</h1>
-        <div>
-          <AddSmurfForm />
+        <nav className="nav-bar">
+          <NavLink to='/'>VILLAGE</NavLink>
+          <NavLink to='/AddSmurfForm'>Add New Smurf</NavLink>
+        </nav>
+
+        <Route
+        path='/AddSmurfForm'
+        render={ props => (
+          <AddSmurfForm  />
+        )}
+        />
+
+
+        <Route
+        exact path='/'
+        render={ props => (
           <SmurfList />
-          </div>
+        )}
+        />
+
+
+
+
       </div>
     );
   }

@@ -21,10 +21,12 @@ class SmurfList extends React.Component {
 }
 
     
-    const mapStateToProps = state => ({
+    const mapStateToProps = state => {
+        return {
         smurfs: state.smurfs,
         getSmurfs: state.getSmurfs
-   });
+        };
+   };
 
 // function mapStateToProps(state) {
 //   console.log(state);
