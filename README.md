@@ -23,8 +23,19 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Redux was created to help efficiently manage state (data) in React applications.  It uses a pattern of holding state in a single object - called the Store.  This object has several important functions including “getState()” which gives read access, “dispatch(action)” which updates state from an action. Because no changes are made to global, application state except in this store and only through its allowed methods, this Store is said to be the “single source of truth” in a redux application.
+
+The two other important pieces to a redux application are Actions and Reducers.  Actions send the actual data (called payloads). They are the only source of date for the Store using “store.dispatch()”.  Reducers specify how redux applications respond to state changes. 
+
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state can be said to be the global state whereas Component state refers only to the state with (or in the children) of a given Component.  For state that is not needed to be maintained globally (for example, temporary form inputs), its fine to use Component state. Other than those instances, it is best to store state at the application level.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Thunk, and its implementation in Redux called redux-thunk is a middleware that allows us to have callback functions within callback functions. This gives us the ability to execute asynchronous actions where needed as in AJAX requests.
 
 ## Project Set Up
 
