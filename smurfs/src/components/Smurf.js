@@ -15,7 +15,6 @@ render() {
     <h3>{this.props.smurf.name}</h3>
      <strong>{this.props.smurf.height} tall</strong>
      <p>{this.props.smurf.age} smurf years old</p>
-    )}
      </div>
 
     );
